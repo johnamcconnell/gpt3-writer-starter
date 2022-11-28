@@ -34,7 +34,7 @@ export default function Document() {
 
         <meta property="og:type" content="website"></meta>
         <meta property="og:url" content="https://marcus.newagestoic.com"></meta>
-        <meta property="og:title" content="GTFOL"></meta>
+        <meta property="og:title" content="Ask Marcus Anything"></meta>
         <meta property="og:description" content="Ever wonder what it would be like to sit down and chat with Marcus Aurelius? Now you can with the power of GPT-3"></meta>
         <meta property="og:image" content="https://documents-scus.bildr.com/rd582f3f32db04431a4b7174000513cfe/doc/gtfometa.kLChOMOzM0AM47PeQ6waOw.png"></meta>
 
