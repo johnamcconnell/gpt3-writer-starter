@@ -19,10 +19,6 @@ export default function Document() {
 
         <link rel="icon" type="image/x-icon" href="https://documents-scus.bildr.com/rd582f3f32db04431a4b7174000513cfe/doc/marcus-aurelius-gettyimages-122316830.ZA9Ai6KCZ02q28B9AAVp0A.jpg"></link>
 
-
-        //Google / Search Engine Tags
-
-        // Twitter Meta Tags
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:image" content="https://documents-scus.bildr.com/rd582f3f32db04431a4b7174000513cfe/doc/gtfometa.kLChOMOzM0AM47PeQ6waOw.png"></meta>
         <meta property="twitter:url" content="https://marcus.newagestoic.com"></meta>
@@ -32,12 +28,10 @@ export default function Document() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
         <meta name="language" content="English"></meta>
 
-        // Primary Meta Tags
-        <title>GTFOL</title>
+        <title>Tea Time with Marcus Aurelius</title>
         <meta name="title" content="Tea time with Marcus Aurelius"></meta>
         <meta name="description" content="Ever wonder what it would be like to sit down and chat with Marcus Aurelius? Now you can with the power of GPT-3"></meta>
 
-        // Open Graph / Facebook 
         <meta property="og:type" content="website"></meta>
         <meta property="og:url" content="https://marcus.newagestoic.com"></meta>
         <meta property="og:title" content="GTFOL"></meta>
