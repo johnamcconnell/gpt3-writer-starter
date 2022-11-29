@@ -49,7 +49,7 @@ const Home = () => {
         </div>
         <div className="prompt-container">
           <textarea
-            placeholder="start typing here"
+            placeholder="What would you like to ask Marcus Aurelius?"
             className="prompt-box"
             value={userInput}
             onChange={onUserChangedText}
