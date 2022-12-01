@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>AMA - Ask Marcus Anything</title>
       </Head>
       <div className="container">
         <div className="header">
@@ -67,7 +67,7 @@ const Home = () => {
           {apiOutput && (
               <div className="output">
                 <div className="output-header-container">
-                  <div className="output-header">
+                  <div className="output-header prompt-box">
                     <h3>Here is what Marcus has to say...</h3>
                   </div>
                 </div>
