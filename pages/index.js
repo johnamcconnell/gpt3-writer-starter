@@ -67,9 +67,9 @@ const Home = () => {
           {apiOutput && (
               <div className="output">
                 <div className="output-header-container">
-                  {/* <div className="output-header">
+                  <div className="output-header">
                     <h3>Here is what Marcus has to say...</h3>
-                  </div> */}
+                  </div>
                 </div>
                 <div className="output-content">
                   <p>{apiOutput}</p>
