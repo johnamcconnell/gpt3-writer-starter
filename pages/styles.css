@@ -27,7 +27,7 @@ body {
     flex-flow: column nowrap;
     gap: 10px;
     height: fit-content;
-    max-width: 975px;
+    max-width: 90%;
     overflow: auto;
     padding: 50px;
     position: relative;
