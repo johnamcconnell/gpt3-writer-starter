@@ -80,7 +80,6 @@ body {
 
 .prompt-box {
     border-bottom-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
     border-left-width: 1px;
     border-right-width: 1px;
     border-style: solid;
@@ -93,7 +92,7 @@ body {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     gap: 10px;
-    height: 3em;
+    height: 2em;
     overflow: hidden;
     padding: 1em;
     position: relative;
