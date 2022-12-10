@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
+import msbadgedark from '../assets/msbadgedark.png';
+import twitterLogo from '../assets/icons8-twitter-69.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -41,7 +43,7 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Chat with Marcus Aurelius</h1>
+            <h1>Ask Marcus Anything</h1>
           </div>
           <div className="header-subtitle">
             <h2>ask one of the best known stoics in the world questions about life</h2>
@@ -67,13 +69,12 @@ const Home = () => {
           {apiOutput && (
               <div className="output">
                 <div className="output-header-container">
-                  <div className="output-header prompt-box">
-                    <h4>Here is what Marcus says...</h4>
-                  </div>
+                  
                 </div>
-                <div className="output-content">
-                  <p>{apiOutput}</p>
-                </div>
+                <span className="output-content" >
+                <p className="simptip-position-bottom simptip-fade" data-tooltip="Tweet this answer (coming soon)">{apiOutput}</p>
+                  <Image className='twitterLogo' src={twitterLogo} alt="buildspace logo" />
+                </span>
               </div>
             )}
         </div>
@@ -88,6 +89,14 @@ const Home = () => {
             <Image src={buildspaceLogo} alt="buildspace logo" />
             <p>build with buildspace</p>
           </div>
+        </a>
+      </div>
+      <div className="msbadge-container">
+        <a
+          href="https://foundershub.startups.microsoft.com"
+          target="_blank"
+          rel="noreferrer"
+        ><Image src={msbadgedark} className='msbadge' alt="Microsoft Startup Partner" /> 
         </a>
       </div>
     </div>

@@ -51,7 +51,7 @@ body {
 .header-title h1 {
     width: 100%;
     font-weight: 700;
-    font-size: 72px;
+    font-size: 2.8em;
     letter-spacing: -4px;
     line-height: 1.2em;
     text-align: center;
@@ -72,7 +72,7 @@ body {
     display: flex;
     flex: 0 0 auto;
     flex-flow: column nowrap;
-    gap: 16px;
+    gap: 10px;
     height: min-content;
     padding: 0px;
     width: min-content;
@@ -84,17 +84,17 @@ body {
     border-right-width: 1px;
     border-style: solid;
     border-top-width: 1px;
-    place-content: flex-start;
-    align-items: flex-start;
+    place-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     display: flex;
     flex: 0 0 auto;
     flex-flow: column nowrap;
-    gap: 10px;
+    /* gap: 10px; */
     height: 2em;
     overflow: hidden;
-    padding: 1em;
+    padding: .5em 1.5em;
     position: relative;
     width: 30em;
     max-width: 1200px;
@@ -243,6 +243,26 @@ textarea {
     align-items: center;
 }
 
+.msbadge-container{
+    display: flex;
+    bottom: 10px;
+    flex: 0 0 auto;
+    height: auto;
+    right: 20px;
+    position: fixed;
+    width: auto;
+    z-index: 1;
+}
+.msbadge-container a{    
+    filter: grayscale(1);
+    transform: none;
+    transform-origin: 50% 50% 0px;
+}
+.msbadge{
+    height:2.5em;
+    width:auto;
+}
+
 .badge img {
     width: 21px;
     height: 17px;
@@ -324,6 +344,12 @@ textarea {
     white-space: pre-line;
     color: rgba(255, 255, 255, 0.5);
 }
+
+.twitterLogo {
+    height:2em;
+    width:2.5em;
+}
+
 
 @media (min-width: 810px) and (max-width: 1199px) {
     .container {
@@ -412,3 +438,198 @@ textarea {
         transform: rotate(360deg);
     }
 }
+
+/* Tooltips */
+[data-tooltip] {
+  position: relative;
+  display: inline-block;
+}
+
+[data-tooltip]:before, [data-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999999;
+}
+
+[data-tooltip]:before {
+  content: '';
+  position: absolute;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+[data-tooltip]:after {
+  height: 22px;
+  padding: 11px 11px 0 11px;
+  font-size: 13px;
+  line-height: 11px;
+  content: attr(data-tooltip);
+  white-space: nowrap;
+}
+
+
+
+
+[data-tooltip].simptip-position-bottom:before {
+  border-bottom-color: #323232;
+}
+
+[data-tooltip].simptip-position-bottom:after {
+  background-color: #323232;
+  color: #ecf0f1;
+}
+
+[data-tooltip]:hover, [data-tooltip]:focus {
+  background-color: transparent;
+}
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/******************************* Position ****************************/
+
+
+
+.simptip-position-bottom:before, .simptip-position-bottom:after, .simptip-position-top:before, .simptip-position-top:after {
+  left: 50%;
+}
+
+.simptip-position-bottom:after, .simptip-position-top:after {
+  margin-left: -18px;
+}
+
+.simptip-position-bottom.half-arrow:before, .simptip-position-top.half-arrow:before {
+  border-style: none;
+  border-right: 7px solid #323232;
+}
+
+
+.simptip-position-bottom:before, .simptip-position-bottom:after {
+  top: 100%;
+}
+
+.simptip-position-bottom:before {
+  margin-top: -5px;
+  /*-5px*/
+}
+
+.simptip-position-bottom:after {
+  margin-top: 7px;
+}
+
+.simptip-position-bottom.simptip-movable:before {
+  margin-top: -15px;
+}
+
+.simptip-position-bottom.simptip-movable:after {
+  margin-top: -3px;
+}
+
+
+/******************************* Features ****************************/
+
+.simptip-smooth:after {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+.simptip-fade:before, .simptip-fade:after {
+  -webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+  -moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+  -ms-transition: opacity 0.2s linear, visibility 0.2s linear;
+  -o-transition: opacity 0.2s linear, visibility 0.2s linear;
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+
+.simptip-multiline:after {
+  height: auto;
+  width: 150px;
+  padding: 11px;
+  line-height: 19px;
+  white-space: normal;
+  text-align: left;
+}
+
+/**************************** Diverse Colors *************************/
+
+.simptip-success.simptip-position-top:before {
+  border-top-color: #62c462;
+}
+
+.simptip-success.simptip-position-top:after {
+  background-color: #62c462;
+  color: #ecf0f1;
+}
+
+.simptip-success.simptip-position-bottom:before {
+  border-bottom-color: #62c462;
+}
+
+.simptip-success.simptip-position-bottom:after {
+  background-color: #62c462;
+  color: #ecf0f1;
+}
+
+.simptip-success.simptip-position-left:before {
+  border-left-color: #62c462;
+}
+
+.simptip-success.simptip-position-left:after {
+  background-color: #62c462;
+  color: #ecf0f1;
+}
+
+.simptip-success.simptip-position-right:before {
+  border-right-color: #62c462;
+}
+
+.simptip-success.simptip-position-right:after {
+  background-color: #62c462;
+  color: #ecf0f1;
+}
+
+.simptip-success.simptip-position-top.half-arrow:before {
+  border-right: 7px solid #62c462;
+}
+
+.simptip-success.simptip-position-bottom.half-arrow:before {
+  border-right: 7px solid #62c462;
+}
+
+
+.simptip-info.simptip-position-bottom:before {
+  border-bottom-color: #5bc0de;
+}
+
+.simptip-info.simptip-position-bottom:after {
+  background-color: #5bc0de;
+  color: #ecf0f1;
+}
+
+.simptip-danger.simptip-position-bottom:before {
+  border-bottom-color: #e74c3c;
+}
+
+.simptip-danger.simptip-position-bottom:after {
+  background-color: #e74c3c;
+  color: #ecf0f1;
+}
+
+.simptip-warning.simptip-position-bottom:before {
+  border-bottom-color: #e67e22;
+}
+
+.simptip-warning.simptip-position-bottom:after {
+  background-color: #e67e22;
+  color: #ecf0f1;
+}
+
