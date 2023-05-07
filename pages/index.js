@@ -41,7 +41,7 @@ const Home = () => {
     window.open(tweet);
   };
 
-  function handleKeyDown = (event) {
+  function handleKeyDown (event) {
     if (event.keyCode === 13) {
       callGenerateEndpoint();
     }
