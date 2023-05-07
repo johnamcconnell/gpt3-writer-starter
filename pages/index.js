@@ -41,6 +41,12 @@ const Home = () => {
     window.open(tweet);
   };
 
+  function handleKeyDown = (event) {
+    if (event.keyCode === 13) {
+      callGenerateEndpoint();
+    }
+  }
+
   return (
     <div className="root">
       <Head>
@@ -61,6 +67,7 @@ const Home = () => {
             className="prompt-box"
             value={userInput}
             onChange={onUserChangedText}
+            onKeyDown={handleKeyDown}
           />
           <div className="prompt-buttons">
             <a
