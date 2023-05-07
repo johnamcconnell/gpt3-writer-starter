@@ -35,6 +35,12 @@ const Home = () => {
   // console.log(event.target.value);
   setUserInput(event.target.value);
   };
+
+  function Tweet() {
+    const tweet = `https://twitter.com/intent/tweet?text=${apiOutput}&ask Marcus here: &url=https://marcus.newagestoic.com`;
+    window.open(tweet);
+  };
+
   return (
     <div className="root">
       <Head>
@@ -72,8 +78,8 @@ const Home = () => {
                   
                 </div>
                 <span className="output-content" >
-                <p className="simptip-position-bottom simptip-fade" data-tooltip="Tweet this answer (coming soon)">{apiOutput}</p>
-                  <Image className='twitterLogo' src={twitterLogo} alt="buildspace logo" />
+                <p className="simptip-position-bottom simptip-fade" data-tooltip="Tweet this answer" onClick={Tweet}>{apiOutput}</p>
+                  <Image className='twitterLogo' src={twitterLogo} alt="buildspace logo" onClick={Tweet} />
                 </span>
               </div>
             )}
