@@ -337,6 +337,7 @@ textarea {
     justify-content: flex-start;
     flex-shrink: 0;
     transform: none;
+    cursor: pointer;
 }
 
 .output-content p {
@@ -348,6 +349,7 @@ textarea {
 .twitterLogo {
     height:2em;
     width:2.5em;
+    cursor:pointer;
 }
 
 

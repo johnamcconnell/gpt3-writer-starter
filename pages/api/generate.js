@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = `an intimate conversation with Marcus Aurelius and his life lessons
+const basePromptPrefix = `an intimate conversation with Marcus Aurelius and his life lessons, the answwers will be concise and in the voice of Marcus Aurelius. Output the answer as a tweet, excluding emojis and hashtags.
 me: `;
 const generateAction = async (req, res) => {
   // Run first prompt
